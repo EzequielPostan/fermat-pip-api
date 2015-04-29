@@ -10,10 +10,10 @@ import java.util.UUID;
  * Created by ciencias on 3/18/15.
  */
 public interface UserRegistry {
-    
-public User createUser() throws CantCreateExtraUserRegistry;
 
-public User getUser(UUID userId) throws CantGetExtraUserRegistry;
-    
-    
+    public User createUser(String userName) throws CantCreateExtraUserRegistry;
+
+    public User getUser(UUID userId) throws CantGetExtraUserRegistry;
+
+
 }
