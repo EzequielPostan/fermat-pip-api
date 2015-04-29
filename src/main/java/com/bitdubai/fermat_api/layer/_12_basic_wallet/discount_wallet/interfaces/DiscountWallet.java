@@ -30,13 +30,13 @@ public interface DiscountWallet {
      * Get the balance of the wallet, the result represents the
      * fiat amount of money the user has.
     */
-  //  public long balance() throws CantCalculateBalanceException;
+    public long balance() throws CantCalculateBalanceException;
 
     /*
      * Get the balance of the wallet, the result represents the
      * fiat amount of money the user has.
     */
-  //  public long available() throws AvailableFailedException;
+    public long available() throws AvailableFailedException;
 
     /*
      * Debit a fiat amount of money that is equivalent to the crypto amount 
