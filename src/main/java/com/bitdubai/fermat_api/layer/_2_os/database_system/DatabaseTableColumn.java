@@ -17,5 +17,8 @@ public interface DatabaseTableColumn {
 
     public int getDataTypeSize ();
 
+    public void setPrimaryKey (boolean primaryKey);
+
+    public boolean getPrimaryKey ();
     
 }

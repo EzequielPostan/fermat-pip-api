@@ -9,4 +9,6 @@ import java.util.UUID;
 public interface ExtraUserManager {
 
     public User getUser(UUID id);
+
+    public User createUser(String userName);
 }
