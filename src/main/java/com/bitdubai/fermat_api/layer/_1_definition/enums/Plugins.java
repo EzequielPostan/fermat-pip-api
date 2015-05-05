@@ -34,7 +34,12 @@ public enum Plugins {
     BITDUBAI_OUTGOING_EXTRA_USER_TRANSACTION("Outgoing Extra User Transaction", Developers.BITDUBAI),
     BITDUBAI_INCOMING_EXTRA_USER_TRANSACTION("Incoming Extra User Transaction", Developers.BITDUBAI),
     BITDUBAI_INCOMING_CRYPTO_TRANSACTION("Incoming Crypto Transaction", Developers.BITDUBAI),
-    BITDUBAI_COINBASE_WORLD("Coinbase World", Developers.BITDUBAI);
+    BITDUBAI_USER_DEVICE_USER("User Device User", Developers.BITDUBAI),
+    BITDUBAI_USER_EXTRA_USER("User Extra User", Developers.BITDUBAI),
+    BITDUBAI_USER_INTRA_USER("User Intra User", Developers.BITDUBAI),
+    BITDUBAI_COINBASE_WORLD("Coinbase World", Developers.BITDUBAI),
+    BITDUBAI_BITCOIN_WALLET_BASIC_WALLET("Bitcoin Wallet Basic Wallet", Developers.BITDUBAI );
+
 
     private final String key;
     private final Developers developer;

@@ -15,7 +15,7 @@ public interface DatabaseTableFactory {
 
     public  String getTableName ();
 
-    public void addColumn (String columnName, DatabaseDataType dataType, int dataTypeSize);
+    public void addColumn (String columnName, DatabaseDataType dataType, int dataTypeSize, boolean primaryKey);
 
     public ArrayList<DatabaseTableColumn> getColumns ();
 }

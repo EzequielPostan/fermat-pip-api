@@ -1,5 +1,6 @@
 package com.bitdubai.fermat_api.layer._2_os;
 
+import com.bitdubai.fermat_api.layer._2_os.database_system.PlatformDatabaseSystem;
 import com.bitdubai.fermat_api.layer._2_os.database_system.PluginDatabaseSystem;
 import com.bitdubai.fermat_api.layer._2_os.file_system.PlatformFileSystem;
 import com.bitdubai.fermat_api.layer._2_os.file_system.PluginFileSystem;
@@ -13,6 +14,8 @@ public interface Os {
     public PluginFileSystem getPlugInFileSystem();
 
     public PluginDatabaseSystem getPluginDatabaseSystem();
+
+    public PlatformDatabaseSystem getPlatfotmDatabaseSystem();
 
     public PlatformFileSystem getPlatformFileSystem();
 

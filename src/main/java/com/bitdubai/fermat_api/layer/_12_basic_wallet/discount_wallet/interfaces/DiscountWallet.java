@@ -28,15 +28,15 @@ public interface DiscountWallet {
 
     /*
      * Get the balance of the wallet, the result represents the
-     * fiat amuont of money the user has.
+     * fiat amount of money the user has.
     */
-    public long balance();
+    //public long balance() throws CantCalculateBalanceException;     COMENTADO PORQUE NO COMPILA (LUIS)
 
     /*
      * Get the balance of the wallet, the result represents the
-     * fiat amuont of money the user has.
+     * fiat amount of money the user has.
     */
-    public long available();
+    //public long available() throws AvailableFailedException;         COMENTADO PORQUE NO COMPILA (LUIS)
 
     /*
      * Debit a fiat amount of money that is equivalent to the crypto amount 
