@@ -1,11 +1,15 @@
 package com.bitdubai.fermat_api.layer._2_os.device_connectivity;
 
+import java.util.List;
+
 /**
  * Created by Natalia on 04/05/2015.
  */
 public interface ConnectivityManager {
 
-    public ConnectionType getConnectionType();
+    public List<Network> getConnections();
+
+    public Network getActiveConnection();
 
     public ConnectionCapacity getConnectionIntensity();
 
