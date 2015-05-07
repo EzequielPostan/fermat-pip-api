@@ -1,5 +1,9 @@
 package com.bitdubai.fermat_api.layer._2_os.device_connectivity;
 
+import com.bitdubai.fermat_api.CantGetActiveConnectionException;
+import com.bitdubai.fermat_api.CantGetConnectionsException;
+import com.bitdubai.fermat_api.CantGetIsConnectedException;
+
 import java.util.List;
 
 /**
@@ -7,13 +11,11 @@ import java.util.List;
  */
 public interface ConnectivityManager {
 
-    public List<Network> getConnections();
+    public List<Network> getConnections() throws CantGetConnectionsException;
 
-    public Network getActiveConnection();
+    public Network getActiveConnection() throws CantGetActiveConnectionException;
 
-    public ConnectionCapacity getConnectionIntensity();
-
-    public boolean isConnected(ConnectionType redType);
+    public boolean isConnected(ConnectionType redType) throws CantGetIsConnectedException;
 
     public void setContext (Object context);
 }

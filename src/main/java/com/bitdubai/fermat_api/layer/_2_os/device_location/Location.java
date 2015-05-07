@@ -9,7 +9,13 @@ public interface Location {
 
     public double getLongitude();
 
-    public void setLatitude (double lat);
+    public double getAltitude();
 
-    public void setLongitude (double lng);
+    public long getTime();
+
+    public LocationProvider getProvider();
+
+
+
+
 }
