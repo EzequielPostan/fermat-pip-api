@@ -1,6 +1,6 @@
 package com.bitdubai.fermat_api.layer._16_module.wallet_store;
 
-import com.bitdubai.fermat_api.layer._16_module.wallet_store.exceptions.CantGetWallets;
+import com.bitdubai.fermat_api.layer._16_module.wallet_store.exceptions.CantGetWalletsException;
 
 import java.util.List;
 
@@ -9,5 +9,5 @@ import java.util.List;
  */
 public interface Catalog {
 
-    List<Wallet> getWallets() throws CantGetWallets;
+    List<Wallet> getWallets() throws CantGetWalletsException;
 }

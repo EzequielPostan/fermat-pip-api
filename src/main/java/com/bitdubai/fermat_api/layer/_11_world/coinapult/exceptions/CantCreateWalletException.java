@@ -13,5 +13,5 @@ package com.bitdubai.fermat_api.layer._11_world.coinapult.exceptions;
  *
  * @version 1.0
  */
-public class CantCreateNewCoinapultWallet extends Exception {
+public class CantCreateWalletException extends Exception {
 }

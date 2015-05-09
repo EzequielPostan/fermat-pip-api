@@ -19,7 +19,7 @@ import java.util.List;
  *
  * @version 1.0
  */
-public interface ICoinapultWallet {
+public interface CryptoWallet {
 
     /**
      * Method responsible for make conversion between two currency
@@ -30,25 +30,25 @@ public interface ICoinapultWallet {
      * @param outCurrency
      * @return ICoinapultTransaction
      */
-    public ICoinapultTransaction convert(Number amount, String currency, Number outAmount, String outCurrency);
+    public CoinapultTransaction convert(Number amount, String currency, Number outAmount, String outCurrency);
 
     /**
      * Method  responsible for loading addresses of this wallet
      * @return List<ICoinapultAddress>
      */
-    public List<ICoinapultAddress> getAddresses() throws CantGetAddressesException;
+    public List<CoinapultAddress> getAddresses() throws CantGetAddressesException;
 
     /**
      * Method  responsible for loading the balances of this wallet
      * @return List<ICoinapultBalance>
      */
-    public List<ICoinapultBalance> getBalances() throws CantGetWalletBalanceException;
+    public List<CoinapultBalance> getBalances() throws CantGetWalletBalanceException;
 
     /**
      * Method  responsible for generate new bitcoin address for this wallet
      * @return List<ICoinapultBalance>
      */
-    public ICoinapultAddress generateNewBitCoinAddress();
+    public CoinapultAddress generateNewBitCoinAddress();
 
 
     /**
@@ -60,7 +60,7 @@ public interface ICoinapultWallet {
      * @param outCurrency
      * @return ICoinapultTransaction
      */
-    public ICoinapultTransaction lock(Number amount, Number outAmount, String outCurrency);
+    public CoinapultTransaction lock(Number amount, Number outAmount, String outCurrency);
 
     /**
      * Method  responsible for UNLOCK an amount of bitcoin, to dispose of them and spend
@@ -72,7 +72,7 @@ public interface ICoinapultWallet {
      *
      * @return ICoinapultTransaction
      */
-    public ICoinapultTransaction unlock(Number amount, String inCurrency, Number outAmount, String address);
+    public CoinapultTransaction unlock(Number amount, String inCurrency, Number outAmount, String address);
 
     /**
      * Method  responsible for send an amount of bitcoin
@@ -84,7 +84,7 @@ public interface ICoinapultWallet {
      *
      * @return ICoinapultTransaction
      */
-    public ICoinapultTransaction send(Number amount, String currency, String address, Number outAmount);
+    public CoinapultTransaction send(Number amount, String currency, String address, Number outAmount);
 
     /**
      * Method  responsible for receive an amount of bitcoin
@@ -92,7 +92,7 @@ public interface ICoinapultWallet {
      * @param amount
      * @return ICoinapultTransaction
      */
-    public ICoinapultTransaction receive(Number amount);
+    public CoinapultTransaction receive(Number amount);
 
     /**
      * Method  responsible for loading transactions of this wallet
@@ -100,7 +100,7 @@ public interface ICoinapultWallet {
      * @return List<ICoinapultTransaction>
      * @throws com.bitdubai.fermat_api.layer._11_world.coinapult.exceptions.CantGetTransactionsException
      */
-    public List<ICoinapultTransaction> getTransactions() throws CantGetTransactionsException;
+    public List<CoinapultTransaction> getTransactions() throws CantGetTransactionsException;
 
 
 

@@ -6,9 +6,9 @@
  */
 package com.bitdubai.fermat_api.layer._11_world.coinapult;
 
-import com.bitdubai.fermat_api.layer._11_world.coinapult.exceptions.CantCreateNewCoinapultWallet;
+import com.bitdubai.fermat_api.layer._11_world.coinapult.exceptions.CantCreateWalletException;
 import com.bitdubai.fermat_api.layer._11_world.coinapult.exceptions.CantValidateAddressException;
-import com.bitdubai.fermat_api.layer._11_world.coinapult.wallet.ICoinapultWallet;
+import com.bitdubai.fermat_api.layer._11_world.coinapult.wallet.CryptoWallet;
 
 import java.util.UUID;
 
@@ -19,7 +19,7 @@ import java.util.UUID;
  *
  * @version 1.0
  */
-public interface ICoinapultWalletsManager {
+public interface WalletManager {
 
     /**
      * Create a new coinapult wallet
@@ -27,7 +27,7 @@ public interface ICoinapultWalletsManager {
      * @param agree If you are agree whit the terms of service of coinapult
      * @return UUID The New Id for the wallet
      */
-    public UUID createNewCoinapultWallet(boolean agree) throws CantCreateNewCoinapultWallet;
+    public UUID createNewCoinapultWallet(boolean agree) throws CantCreateWalletException;
 
     /**
      * Method responsible for obtain the coinapult wallet instance for this walletId
@@ -35,7 +35,7 @@ public interface ICoinapultWalletsManager {
      * @param walletId id of the wallet
      * @return ICoinapultWallet coinapult wallet instance or null
      */
-    public ICoinapultWallet getCoinapultWallet(String walletId);
+    public CryptoWallet getCoinapultWallet(String walletId);
 
     /**
      * Method responsible for validate a bitcoin address
