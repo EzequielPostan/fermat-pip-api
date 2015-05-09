@@ -1,16 +1,15 @@
 package com.bitdubai.fermat_api.layer._11_world;
 
-import com.bitdubai.fermat_api.layer._11_world.blockchain_info.exceptions.CantGetAddressBalanceException;
-import com.bitdubai.fermat_api.layer._11_world.blockchain_info.exceptions.CantGetAddressesException;
-import com.bitdubai.fermat_api.layer._11_world.blockchain_info.exceptions.CantGetNewAddressException;
-import com.bitdubai.fermat_api.layer._11_world.blockchain_info.exceptions.CantGetWalletBalanceException;
-import com.bitdubai.fermat_api.layer._11_world.blockchain_info.exceptions.CantSendCryptoException;
-import com.bitdubai.fermat_api.layer._11_world.blockchain_info.exceptions.CantStartBlockchainInfoWallet;
+import com.bitdubai.fermat_api.layer._11_world.wallet.exceptions.CantGetAddressBalanceException;
+import com.bitdubai.fermat_api.layer._11_world.wallet.exceptions.CantGetAddressesException;
+import com.bitdubai.fermat_api.layer._11_world.wallet.exceptions.CantGetNewAddressException;
+import com.bitdubai.fermat_api.layer._11_world.wallet.exceptions.CantGetWalletBalanceException;
+import com.bitdubai.fermat_api.layer._11_world.wallet.exceptions.CantSendCryptoException;
+import com.bitdubai.fermat_api.layer._11_world.wallet.exceptions.CantStartWallet;
 import com.bitdubai.fermat_api.layer._1_definition.enums.CryptoCurrency;
 import com.bitdubai.fermat_api.layer._1_definition.money.CryptoAddress;
 
 import java.util.List;
-import java.util.UUID;
 
 /**
  * Created by ciencias on 3/12/15.
@@ -18,7 +17,7 @@ import java.util.UUID;
 public interface CryptoWallet {
 
 
-    public void start() throws CantStartBlockchainInfoWallet;
+    public void start() throws CantStartWallet;
 
     public void stop();
 

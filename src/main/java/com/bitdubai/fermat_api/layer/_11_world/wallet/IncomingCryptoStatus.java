@@ -1,4 +1,4 @@
-package com.bitdubai.fermat_api.layer._11_world.blockchain_info;
+package com.bitdubai.fermat_api.layer._11_world.wallet;
 
 /**
  * Created by ciencias on 3/20/15.

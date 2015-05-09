@@ -1,4 +1,4 @@
-package com.bitdubai.fermat_api.layer._11_world.blockchain_info.exceptions;
+package com.bitdubai.fermat_api.layer._11_world.wallet.exceptions;
 
 /**
  * Created by toshiba on 14/04/2015.

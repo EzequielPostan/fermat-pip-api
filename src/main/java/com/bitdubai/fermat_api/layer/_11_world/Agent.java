@@ -1,6 +1,6 @@
 package com.bitdubai.fermat_api.layer._11_world;
 
-import com.bitdubai.fermat_api.layer._11_world.blockchain_info.exceptions.CantStartAgentException;
+import com.bitdubai.fermat_api.layer._11_world.wallet.exceptions.CantStartAgentException;
 
 /**
  * Created by ciencias on 3/19/15.
