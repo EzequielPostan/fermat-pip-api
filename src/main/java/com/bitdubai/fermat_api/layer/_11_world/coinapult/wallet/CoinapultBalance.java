@@ -13,5 +13,5 @@ package com.bitdubai.fermat_api.layer._11_world.coinapult.wallet;
  *
  * @version 1.0
  */
-public interface ICoinapultBalance {
+public interface CoinapultBalance {
 }
