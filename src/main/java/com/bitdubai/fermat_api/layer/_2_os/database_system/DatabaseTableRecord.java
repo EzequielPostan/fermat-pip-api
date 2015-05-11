@@ -16,7 +16,11 @@ public interface DatabaseTableRecord {
     
     public long getLongValue(String columnName);
 
+    public Integer getIntegerValue(String columnName);
+
     public float getFloatValue(String columnName);
+
+    public double getDoubleValue(String columnName);
     
     public void setStringValue (String columnName, String value);
 
@@ -24,9 +28,15 @@ public interface DatabaseTableRecord {
 
     public void setLongValue(String columnName, long value);
 
+    public void setIntegerValue(String columnName, Integer value);
+
     public void setFloatValue(String columnName, float value);
 
-    public List<DatabaseRecord> getValues();
+    public void setDoubleValue(String columnName, double value);
 
-    public void setValues( List<DatabaseRecord> values );
+
+
+    //public List<DatabaseRecord> getValues();
+
+    //public void setValues( List<DatabaseRecord> values );
 }
