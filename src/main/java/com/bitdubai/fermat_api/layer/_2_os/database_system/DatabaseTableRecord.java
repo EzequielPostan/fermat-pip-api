@@ -14,17 +14,17 @@ public interface DatabaseTableRecord {
     
     public UUID getUUIDValue(String columnName);
     
-    public long getlongValue(String columnName);
+    public long getLongValue(String columnName);
 
-    public float getfloatValue(String columnName);
+    public float getFloatValue(String columnName);
     
     public void setStringValue (String columnName, String value);
 
     public void setUUIDValue (String columnName, UUID value);
 
-    public void setlongValue (String columnName, long value);
+    public void setLongValue(String columnName, long value);
 
-    public void setfloatValue (String columnName, float value);
+    public void setFloatValue(String columnName, float value);
 
     public List<DatabaseRecord> getValues();
 
