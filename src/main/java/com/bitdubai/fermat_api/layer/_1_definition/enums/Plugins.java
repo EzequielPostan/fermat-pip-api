@@ -40,6 +40,7 @@ public enum Plugins {
     BITDUBAI_USER_INTRA_USER("User Intra User", Developers.BITDUBAI),
     BITDUBAI_COINBASE_WORLD("Coinbase World", Developers.BITDUBAI),
     BITDUBAI_BITCOIN_WALLET_BASIC_WALLET("Bitcoin Wallet Basic Wallet", Developers.BITDUBAI ),
+    BITDUBAI_DEVICE_CONNECTIVITY("Bitcoin Device Connectivity", Developers.BITDUBAI ),
     BITDUBAI_LOCATION_WORLD("Location World", Developers.BITDUBAI);
 
 

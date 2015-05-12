@@ -12,7 +12,9 @@ public enum Addons {
     DEVICE_USER ("Device user"),
     LICENSE_MANAGER ("License Manager"),
     INTRA_USER("Intra User"),
-    EXTRA_USER("Extra User");
+    EXTRA_USER("Extra User"),
+    DEVICE_CONNECTIVITY("Device Connectivity");
+
 
     private final String key;
 
