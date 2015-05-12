@@ -10,6 +10,7 @@ import com.bitdubai.fermat_api.layer._11_world.coinapult.exceptions.CantGetAddre
 import com.bitdubai.fermat_api.layer._11_world.coinapult.exceptions.CantGetTransactionsException;
 import com.bitdubai.fermat_api.layer._11_world.coinapult.exceptions.CantGetWalletBalanceException;
 
+
 import java.util.List;
 
 /**
@@ -30,25 +31,25 @@ public interface CryptoWallet {
      * @param outCurrency
      * @return ICoinapultTransaction
      */
-    public CoinapultTransaction convert(Number amount, String currency, Number outAmount, String outCurrency);
+    public CryptoWalletTransaction convert(Number amount, String currency, Number outAmount, String outCurrency);
 
     /**
      * Method  responsible for loading addresses of this wallet
      * @return List<ICoinapultAddress>
      */
-    public List<CoinapultAddress> getAddresses() throws CantGetAddressesException;
+    public List<CryptoWalletAddress> getAddresses() throws CantGetAddressesException;
 
     /**
      * Method  responsible for loading the balances of this wallet
      * @return List<ICoinapultBalance>
      */
-    public List<CoinapultBalance> getBalances() throws CantGetWalletBalanceException;
+    public List<CryptoWalletBalance> getBalances() throws CantGetWalletBalanceException;
 
     /**
      * Method  responsible for generate new bitcoin address for this wallet
      * @return List<ICoinapultBalance>
      */
-    public CoinapultAddress generateNewBitCoinAddress();
+    public CryptoWalletAddress generateNewBitCoinAddress();
 
 
     /**
@@ -60,7 +61,7 @@ public interface CryptoWallet {
      * @param outCurrency
      * @return ICoinapultTransaction
      */
-    public CoinapultTransaction lock(Number amount, Number outAmount, String outCurrency);
+    public CryptoWalletTransaction lock(Number amount, Number outAmount, String outCurrency);
 
     /**
      * Method  responsible for UNLOCK an amount of bitcoin, to dispose of them and spend
@@ -72,7 +73,7 @@ public interface CryptoWallet {
      *
      * @return ICoinapultTransaction
      */
-    public CoinapultTransaction unlock(Number amount, String inCurrency, Number outAmount, String address);
+    public CryptoWalletTransaction unlock(Number amount, String inCurrency, Number outAmount, String address);
 
     /**
      * Method  responsible for send an amount of bitcoin
@@ -84,7 +85,7 @@ public interface CryptoWallet {
      *
      * @return ICoinapultTransaction
      */
-    public CoinapultTransaction send(Number amount, String currency, String address, Number outAmount);
+    public CryptoWalletTransaction send(Number amount, String currency, String address, Number outAmount);
 
     /**
      * Method  responsible for receive an amount of bitcoin
@@ -92,7 +93,7 @@ public interface CryptoWallet {
      * @param amount
      * @return ICoinapultTransaction
      */
-    public CoinapultTransaction receive(Number amount);
+    public CryptoWalletTransaction receive(Number amount);
 
     /**
      * Method  responsible for loading transactions of this wallet
@@ -100,7 +101,7 @@ public interface CryptoWallet {
      * @return List<ICoinapultTransaction>
      * @throws com.bitdubai.fermat_api.layer._11_world.coinapult.exceptions.CantGetTransactionsException
      */
-    public List<CoinapultTransaction> getTransactions() throws CantGetTransactionsException;
+    public List<CryptoWalletTransaction> getTransactions() throws CantGetTransactionsException;
 
 
 
