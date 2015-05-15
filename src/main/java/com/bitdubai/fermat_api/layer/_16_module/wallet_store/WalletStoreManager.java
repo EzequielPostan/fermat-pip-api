@@ -8,7 +8,7 @@ import java.util.UUID;
 /**
  * Created by loui on 05/02/15.
  */
-public interface WalletStoreManager {
+public interface WalletStoreManager extends Catalog{
     
     public void recordInstalledWallet (UUID walletId) throws CantRecordInstalledWalletException;
     
