@@ -2,7 +2,7 @@ package com.bitdubai.fermat_api.layer._2_os;
 
 import com.bitdubai.fermat_api.layer._2_os.database_system.PlatformDatabaseSystem;
 import com.bitdubai.fermat_api.layer._2_os.database_system.PluginDatabaseSystem;
-import com.bitdubai.fermat_api.layer._2_os.device_location.LocationManager;
+
 import com.bitdubai.fermat_api.layer._2_os.file_system.PlatformFileSystem;
 import com.bitdubai.fermat_api.layer._2_os.file_system.PluginFileSystem;
 import com.bitdubai.fermat_api.layer._2_os.location_system.LocationSystem;
@@ -21,8 +21,6 @@ public interface Os {
     public PlatformFileSystem getPlatformFileSystem();
 
     public LocationSystem getLocationSystem();
-
-    public LocationManager getLocationManager();
             
     void setContext (Object context);
 
