@@ -6,7 +6,7 @@ import com.bitdubai.fermat_api.layer._9_communication.CommunicationException;
  * Fermat Messaging Protocol
  * Created by jorgeejgonzalez 
  */
-public class FMPException extends Exception {
+public abstract class FMPException extends Exception {
 
 	public FMPException(){
 		super();
