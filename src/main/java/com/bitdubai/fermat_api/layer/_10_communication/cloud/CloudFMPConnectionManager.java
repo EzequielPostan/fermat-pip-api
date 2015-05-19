@@ -6,5 +6,7 @@ import com.bitdubai.fermat_api.layer._10_communication.fmp.FMPPacketHandler;
  *	created by jorgeejgonzalez
  */
 public interface CloudFMPConnectionManager extends CloudConnectionManager, FMPPacketHandler {
+
+	public void processDataPacket(final String data);
 	
 }
