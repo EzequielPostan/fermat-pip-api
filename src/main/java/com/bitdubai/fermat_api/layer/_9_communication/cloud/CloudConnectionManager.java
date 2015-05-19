@@ -7,6 +7,7 @@ import java.nio.channels.Selector;
  *	created by jorgeejgonzalez
  */
 public interface CloudConnectionManager extends ConnectionAgent {
+	public CloudConnectionAddress getAddress();
 	public void iterateSelectedKeys(final Selector selector) throws CloudConnectionException;
 	public void acceptKey(final SelectionKey key) throws CloudConnectionException;
 	public void connectToKey(final SelectionKey key) throws CloudConnectionException;
