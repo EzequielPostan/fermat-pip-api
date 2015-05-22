@@ -9,5 +9,6 @@ import java.nio.channels.SelectionKey;
 public interface CloudFMPConnectionManager extends CloudConnectionManager, FMPPacketHandler {
 
 	public void processDataPacket(final String data, final SelectionKey key) throws CloudConnectionException;
+	public String getPublicKey();	
 	
 }
