@@ -3,6 +3,7 @@ apply plugin: 'maven'
 apply plugin: 'findbugs'
 apply plugin: 'checkstyle'
 apply plugin: 'pmd'
+apply plugin: 'eclipse'
 
 
 group = "com.bitdubai.wallet"
