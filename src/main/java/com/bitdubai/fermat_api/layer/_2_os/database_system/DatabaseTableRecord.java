@@ -6,9 +6,17 @@ import java.util.Map;
 import java.util.UUID;
 
 /**
- * Created by ciencias on 01.02.15.
- */
-public interface DatabaseTableRecord {
+ *
+ *  <p>The abstract class <code>com.bitdubai.fermat_api.layer._2_os.database_syste.DatabaseTableRecord</code> is a interface
+ *     that define the methods to get and set database table record values.
+ *
+ *
+ *  @author  Luis
+ *  @version 1.0.0
+ *  @since   01/02/2015.
+ * */
+
+ public interface DatabaseTableRecord {
     
     public String getStringValue(String columnName);
     

@@ -7,8 +7,16 @@ import com.bitdubai.fermat_api.layer._2_os.database_system.exceptions.InvalidOwn
 import java.util.UUID;
 
 /**
- * Created by ciencias on 3/23/15.
- */
+ *
+ *  <p>The abstract class <code>com.bitdubai.fermat_api.layer._2_os.database_system</code> is a interface
+ *     that define the methods to  provides the caller with a Table Structure object.
+ *
+ *
+ *
+ *  @author  Luis
+ *  @version 1.0.0
+ *  @since   23/03/15.
+ * */
 public interface DatabaseFactory {
 
     public void createTable(UUID ownerId, DatabaseTableFactory tableFactory) throws InvalidOwnerId, CantCreateTableException;
