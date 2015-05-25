@@ -1,7 +1,5 @@
 package com.bitdubai.fermat_api.layer._1_definition.enums;
 
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Created by ciencias on 20.12.14.

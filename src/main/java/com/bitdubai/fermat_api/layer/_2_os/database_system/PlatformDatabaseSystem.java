@@ -4,7 +4,7 @@ import com.bitdubai.fermat_api.layer._2_os.database_system.exceptions.CantCreate
 import com.bitdubai.fermat_api.layer._2_os.database_system.exceptions.DatabaseNotFoundException;
 import com.bitdubai.fermat_api.layer._2_os.file_system.exceptions.CantOpenDatabaseException;
 
-import java.util.UUID;
+
 
 /**
  * Created by ciencias on 3/18/15.

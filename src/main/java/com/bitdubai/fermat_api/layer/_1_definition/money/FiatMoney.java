@@ -9,4 +9,20 @@ public class FiatMoney implements Money {
 
     private FiatCurrency mFiatCurrency;
     private double mFiatAmount;
+    
+    
+	public FiatCurrency getmFiatCurrency() {
+		return mFiatCurrency;
+	}
+	public void setmFiatCurrency(FiatCurrency mFiatCurrency) {
+		this.mFiatCurrency = mFiatCurrency;
+	}
+	public double getmFiatAmount() {
+		return mFiatAmount;
+	}
+	public void setmFiatAmount(double mFiatAmount) {
+		this.mFiatAmount = mFiatAmount;
+	}
+    
+    
 }

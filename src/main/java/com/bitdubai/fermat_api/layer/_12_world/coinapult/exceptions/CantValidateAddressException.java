@@ -14,4 +14,6 @@ package com.bitdubai.fermat_api.layer._12_world.coinapult.exceptions;
  * @version 1.0
  */
 public class CantValidateAddressException extends Exception {
+	
+	private static final long serialVersionUID = 4150733208425555543L;
 }
