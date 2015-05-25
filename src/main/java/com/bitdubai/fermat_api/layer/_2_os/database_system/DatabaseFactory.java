@@ -23,9 +23,9 @@ public interface DatabaseFactory {
 
     public DatabaseTableFactory newTableFactory(UUID ownerId, String tableName) throws InvalidOwnerId;
 
-    public void createTable(DatabaseTableFactory tableFactory) throws InvalidOwnerId, CantCreateTableException;
+    public void createTable(DatabaseTableFactory tableFactory) throws CantCreateTableException;
 
-    public DatabaseTableFactory newTableFactory(String tableName) throws InvalidOwnerId;
+    public DatabaseTableFactory newTableFactory(String tableName);
 
     public void createDatabase(String databaseName) throws CantCreateDatabaseException;
 
