@@ -57,7 +57,7 @@ uploadArchives {
 
 	mavenDeployer {
             configuration = configurations.deployerJars
-            repository (url: "dav:https://repository-fermat.forge.cloudbees.com/snapshot/") {
+            repository (url: "dav:https://repository-fermat.forge.cloudbees.com/release/") {
                 authentication(userName: 'raul-pena', password: 'bAvE19G77_')
             }
         }
