@@ -11,12 +11,12 @@ public enum Country {
     private final String mCode;
     private final String mDisplayName;
 
-    Country(String Code, String DisplayName) {
+    private Country (String Code, String DisplayName) {
         this.mCode = Code;
         this.mDisplayName = DisplayName;
     }
 
-    public String Code()   { return mCode; }
-    public String Country() { return mDisplayName; }
+    public String getCode()   { return mCode; }
+    public String getCountry() { return mDisplayName; }
 
 }

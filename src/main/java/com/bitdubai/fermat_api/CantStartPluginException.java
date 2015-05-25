@@ -1,13 +1,17 @@
+
 package com.bitdubai.fermat_api;
+
 
 import com.bitdubai.fermat_api.layer._1_definition.enums.Plugins;
 
-/**
- * Created by ciencias on 3/23/15.
- */
+
 public class CantStartPluginException extends Exception{
     
-    Plugins plugin;
+
+	private Plugins plugin;
+	
+	
+	private static final long serialVersionUID = -4797409301346577158L;
 
 
     public  CantStartPluginException (Plugins plugin){
@@ -17,5 +21,4 @@ public class CantStartPluginException extends Exception{
     public Plugins getPlugin (){
         return this.plugin;
     }
-    
 }
