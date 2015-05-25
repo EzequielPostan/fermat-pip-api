@@ -1,7 +1,8 @@
+
 package com.bitdubai.fermat_api;
 
-/**
- * Created by ciencias on 02.02.15.
- */
+
 public class CantInitializePluginsManagerException extends Exception {
+
+	private static final long serialVersionUID = -2909149892880578689L;
 }
