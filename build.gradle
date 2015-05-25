@@ -1,14 +1,65 @@
 apply plugin: 'java'
+apply plugin: 'maven'
+
+
+
+group = "com.bitdubai.wallet"
 sourceCompatibility = 1.7
 version = '1.0.0'
+
+
+
+configurations {
+    deployerJars
+}
+
+
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'fermat-pip-api',
+                   'Implementation-Version': '1.0.0'
+    }
+}
+
+
+
 repositories {
-    mavenCentral()
+
+    mavenCentral ()
 }
 
 
 
 dependencies {
-    testCompile 'junit:junit:4.11'
+    
+    compile group: 'commons-collections', name: 'commons-collections', version: '3.2'
+    testCompile group: 'junit', name: 'junit', version: '4.+'
+    deployerJars "org.apache.maven.wagon:wagon-webdav:1.0-beta-2"
 }
 
 
+
+test {
+    systemProperties 'property': 'value'
+}
+
+
+
+uploadArchives {
+                
+    repositories {
+   
+        flatDir {
+            
+            dirs 'repos'
+        }
+
+	mavenDeployer {
+            configuration = configurations.deployerJars
+            repository (url: "dav:https://repository-fermat.forge.cloudbees.com/snapshot/") {
+                authentication(userName: 'raul-pena', password: 'bAvE19G77_')
+            }
+        }
+    }
+}
