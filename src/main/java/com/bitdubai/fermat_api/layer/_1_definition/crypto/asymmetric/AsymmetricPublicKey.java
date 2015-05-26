@@ -4,24 +4,33 @@ import java.math.BigInteger;
 import java.security.spec.ECParameterSpec;
 import java.security.spec.ECPoint;
 
-import com.bitdubai.fermat_api.layer._1_definition.crypto.asymmetric.interfaces.ECCurve;
-import com.bitdubai.fermat_api.layer._1_definition.crypto.asymmetric.interfaces.ECPublicKey;
+import com.bitdubai.fermat_api.layer._1_definition.crypto.asymmetric.interfaces.Curve;
+import com.bitdubai.fermat_api.layer._1_definition.crypto.asymmetric.interfaces.PublicKey;
 
-@SuppressWarnings("serial")
-public class ECCPublicKey extends ECCPoint implements ECPublicKey {
+public class AsymmetricPublicKey extends EllipticCurvePoint implements PublicKey {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8266148738409166071L;
 
 	private static final String ECC_ALGORITHM = "ECIES";
 	
-	private final ECCurve curve;
-
-	public ECCPublicKey(final BigInteger x, final BigInteger y){
-		super(x, y);
-		curve = ECCCurve.getSecP256K1();
+	private transient final Curve curve;
+	
+	public AsymmetricPublicKey(){
+		super();
+		curve = EllipticCryptographyCurve.getSecP256K1();
 	}
 
-	public ECCPublicKey(final String uncompressedKey){
+	public AsymmetricPublicKey(final BigInteger x, final BigInteger y){
+		super(x, y);
+		curve = EllipticCryptographyCurve.getSecP256K1();
+	}
+
+	public AsymmetricPublicKey(final String uncompressedKey){
 		super(new BigInteger(uncompressedKey.substring(2,66),16), new BigInteger(uncompressedKey.substring(66),16));
-		curve = ECCCurve.getSecP256K1();
+		curve = EllipticCryptographyCurve.getSecP256K1();
 	}
 
 	/*
@@ -29,7 +38,7 @@ public class ECCPublicKey extends ECCPoint implements ECPublicKey {
 	 */
 	@Override
 	public ECPoint getW(){
-		return this;
+		return new ECPoint(getX(), getY());
 	}
 	
 	/*

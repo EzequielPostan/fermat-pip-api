@@ -3,21 +3,24 @@ package com.bitdubai.fermat_api.layer._1_definition.crypto.asymmetric;
 import java.math.BigInteger;
 import java.security.spec.ECParameterSpec;
 
-import com.bitdubai.fermat_api.layer._1_definition.crypto.asymmetric.interfaces.ECCurve;
-import com.bitdubai.fermat_api.layer._1_definition.crypto.asymmetric.interfaces.ECPrivateKey;
+import com.bitdubai.fermat_api.layer._1_definition.crypto.asymmetric.interfaces.Curve;
+import com.bitdubai.fermat_api.layer._1_definition.crypto.asymmetric.interfaces.PrivateKey;
 
+public class AsymmetricPrivateKey implements PrivateKey {
 
-@SuppressWarnings("serial")
-public class ECCPrivateKey implements ECPrivateKey {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3606455537479726373L;
 
 	private static final String ECC_ALGORITHM = "ECIES";
 
 	private final BigInteger s;
-	private final ECCurve curve;
+	private transient final Curve curve;
 
-	public ECCPrivateKey(final BigInteger s){
+	public AsymmetricPrivateKey(final BigInteger s){
 		this.s = s;
-		curve = ECCCurve.getSecP256K1();	
+		curve = EllipticCryptographyCurve.getSecP256K1();	
 	}
 
 	/*
