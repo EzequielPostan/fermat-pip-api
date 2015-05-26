@@ -35,9 +35,9 @@ public class CryptoHasher {
 		try {
 			hashed = performRipemd160(text.getBytes("UTF-8"));
 		} catch(Exception ex) {
-                        System.err.println(ex.getMessage());
-                }
-                return hashed;
+			System.err.println(ex.getMessage());
+		}
+		return hashed;
 	}
 
 	public static String performRipemd160(final BigInteger number) {
@@ -45,9 +45,9 @@ public class CryptoHasher {
 		try {
 			hashed = performRipemd160(number.toByteArray());
 		} catch(Exception ex) {
-                        System.err.println(ex.getMessage());
-                }
-                return hashed;
+			System.err.println(ex.getMessage());
+		}
+		return hashed;
 	}
 
 	/*
@@ -58,7 +58,7 @@ public class CryptoHasher {
 		try {
 			MessageDigest digest = MessageDigest.getInstance("SHA-256");
 			if(data.length == 20)
-				digest.update(new Byte("00").byteValue());
+				digest.update(Byte.valueOf("00"));
 			byte[] hash = digest.digest(data);
 			BigInteger hashValue = new BigInteger(1, hash);
 			hashed = String.format("%064X", hashValue);

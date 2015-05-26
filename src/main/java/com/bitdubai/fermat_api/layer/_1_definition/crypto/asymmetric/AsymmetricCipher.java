@@ -1,6 +1,7 @@
 package com.bitdubai.fermat_api.layer._1_definition.crypto.asymmetric;
 
 import java.math.BigInteger;
+import java.nio.charset.Charset;
 import java.security.SecureRandom;
 import java.security.Security;
 
@@ -9,29 +10,31 @@ import javax.crypto.Cipher;
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
 import org.bouncycastle.util.encoders.Hex;
 
-import com.bitdubai.fermat_api.layer._1_definition.crypto.asymmetric.interfaces.ECPrivateKey;
+import com.bitdubai.fermat_api.layer._1_definition.crypto.asymmetric.interfaces.PrivateKey;
 
-public class ECCCipher {
+public class AsymmetricCipher {
 
 	private SecureRandom randomizer;
 
 	private static final String CIPHER_ALGORITHM = "ECIES";
 	
-	public ECCCipher(){
+	public AsymmetricCipher(){
 		this(new SecureRandom());
 	}
 
-	public ECCCipher(SecureRandom randomizer){
+	public AsymmetricCipher(SecureRandom randomizer){
 		this.randomizer = randomizer;
 		Security.addProvider(new BouncyCastleProvider());
 	}
 
-	public String encryptWithPublicKey(final String message, final ECCPublicKey publicKey) {
+	public String encryptWithPublicKey(final String message, final AsymmetricPublicKey publicKey) {
 		String encrypted = null;
 		try{
+			byte[] messageBytes = message.getBytes(Charset.forName("UTF-8"));
 			Cipher cipher = Cipher.getInstance(CIPHER_ALGORITHM);
 			cipher.init(Cipher.ENCRYPT_MODE, publicKey, randomizer);
-			encrypted = Hex.toHexString(cipher.doFinal(message.getBytes(), 0, message.getBytes().length));
+			byte[] encryptedBytes = cipher.doFinal(messageBytes, 0, messageBytes.length);
+			encrypted = Hex.toHexString(encryptedBytes);
 		} catch(Exception ex){
 			ex.printStackTrace();
 		}
@@ -39,14 +42,15 @@ public class ECCCipher {
 		return encrypted;
 	}
 
-	public String decryptWithPrivateKey(final String encryptedMessage, final ECPrivateKey privateKey) {
+	public String decryptWithPrivateKey(final String encryptedMessage, final PrivateKey privateKey) {
 		String decrypted = null;
 		try{
 			BigInteger encrypted = new BigInteger(encryptedMessage, 16);
 			byte[] encryptedBytes = encrypted.toByteArray();
 			Cipher cipher = Cipher.getInstance(CIPHER_ALGORITHM);
 			cipher.init(Cipher.DECRYPT_MODE, privateKey, randomizer);
-			decrypted = new String(cipher.doFinal(encryptedBytes, 0, encryptedBytes.length));
+			byte[] decryptedBytes = cipher.doFinal(encryptedBytes, 0, encryptedBytes.length);
+			decrypted = new String(decryptedBytes, Charset.forName("UTF-8"));
 		} catch(Exception ex){
 			ex.printStackTrace();
 		}

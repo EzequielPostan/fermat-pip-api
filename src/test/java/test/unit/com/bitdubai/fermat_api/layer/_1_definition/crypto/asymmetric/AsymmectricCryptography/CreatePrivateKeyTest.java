@@ -21,10 +21,9 @@ public class CreatePrivateKeyTest extends AsymmetricCryptographyUnitTest {
 		assertNotNull(privateKey);
 	}
 	
-	@SuppressWarnings("unused")
 	@Test(expected=NumberFormatException.class)
 	public void CreatePrivateKey_Default_BigIntegerIsHexValue(){		
-		BigInteger privateKey = new BigInteger(AsymmectricCryptography.createPrivateKey());		
+		new BigInteger(AsymmectricCryptography.createPrivateKey());		
 	}
 	
 	@Test

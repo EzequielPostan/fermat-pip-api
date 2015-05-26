@@ -20,12 +20,11 @@ public class DerivePublicKeyTest extends AsymmetricCryptographyUnitTest {
 	public void DerivePublicKey_ValidPrivateKey_BigIntegerValue() {
 		BigInteger publicKey = new BigInteger(AsymmectricCryptography.derivePublicKey(testPrivateKey),16);
 		assertNotNull(publicKey);
-	}
+	}	
 	
-	@SuppressWarnings("unused")
 	@Test(expected=NumberFormatException.class)
 	public void DerivePublicKey_ValidPrivateKey_BigIntegerIsHexValue() {
-		BigInteger publicKey = new BigInteger(AsymmectricCryptography.derivePublicKey(testPrivateKey));		
+		new BigInteger(AsymmectricCryptography.derivePublicKey(testPrivateKey));		
 	}
 	
 	@Test
