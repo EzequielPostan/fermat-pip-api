@@ -1,8 +1,15 @@
 package com.bitdubai.fermat_api.layer._2_os.database_system;
 
 /**
- * Created by ciencias on 01.02.15.
- */
+ *
+ *  <p>The abstract class <code>com.bitdubai.fermat_api.layer._2_os.database_system.DatabaseTableColumn</code> is a interface
+ *     that define the methods to get and set the properties of the columns in a table in the database.
+ *
+ *
+ *  @author  Luis
+ *  @version 1.0.0
+ *  @since   01/02/15.
+ * */
 public interface DatabaseTableColumn {
     
     public String getName ();
