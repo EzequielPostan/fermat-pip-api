@@ -3,6 +3,7 @@ package com.bitdubai.fermat_api.layer._1_definition.crypto.asymmetric;
 import java.math.BigInteger;
 import java.security.spec.ECFieldFp;
 import java.security.spec.ECParameterSpec;
+import java.security.spec.ECPoint;
 import java.security.spec.EllipticCurve;
 
 import com.bitdubai.fermat_api.layer._1_definition.crypto.asymmetric.interfaces.Curve;
@@ -52,7 +53,7 @@ public class EllipticCryptographyCurve extends EllipticCurve implements Curve {
 
 	@Override
 	public ECParameterSpec getParams(){
-		java.security.spec.ECPoint gPoint = new java.security.spec.ECPoint(g.getX(), g.getY());
+		ECPoint gPoint = new ECPoint(g.getX(), g.getY());
 		return new ECParameterSpec(this, gPoint, n, h);
 	}
 	
