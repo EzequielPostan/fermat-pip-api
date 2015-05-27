@@ -1,6 +1,7 @@
 package com.bitdubai.fermat_api.layer._2_os.database_system;
 
 
+import java.util.List;
 import java.util.UUID;
 
 /**
@@ -40,9 +41,7 @@ import java.util.UUID;
 
     public void setDoubleValue(String columnName, double value);
 
+    public List<DatabaseRecord> getValues();
 
-
-    //public List<DatabaseRecord> getValues();
-
-    //public void setValues( List<DatabaseRecord> values );
+    public void setValues( List<DatabaseRecord> values );
 }
