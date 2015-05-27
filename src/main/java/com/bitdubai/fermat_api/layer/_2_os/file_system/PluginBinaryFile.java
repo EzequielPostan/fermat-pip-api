@@ -4,8 +4,15 @@ import com.bitdubai.fermat_api.layer._2_os.file_system.exceptions.CantLoadFileEx
 import com.bitdubai.fermat_api.layer._2_os.file_system.exceptions.CantPersistFileException;
 
 /**
- * Created by Natalia on 11/02/2015.
- */
+ *
+ *  <p>The abstract class <code>com.bitdubai.fermat_api.layer._2_os.file_system.PluginBinaryFile</code> is a interface
+ *     that define the methods to get, set and save binary file content.
+ *
+ *
+ *  @author  Natalia
+ *  @version 1.0.0
+ *  @since   11/02/15.
+ * */
 public interface PluginBinaryFile {
     
     public byte[] getContent ();
