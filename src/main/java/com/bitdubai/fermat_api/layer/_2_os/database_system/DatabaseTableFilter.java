@@ -1,8 +1,15 @@
 package com.bitdubai.fermat_api.layer._2_os.database_system;
 
 /**
- * Created by ciencias on 01.02.15.
- */
+ *
+ *  <p>The abstract class <code>com.bitdubai.fermat_api.layer._2_os.database_system.DatabaseTableFilter</code> is a interface
+ *     that define methods to sets the columns that were used to make the filter on a table.
+ *
+ *
+ *  @author  Luis
+ *  @version 1.0.0
+ *  @since  01/02/15.
+ * */
 public interface DatabaseTableFilter {
     
     

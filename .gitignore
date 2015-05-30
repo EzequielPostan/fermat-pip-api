@@ -1,3 +1,7 @@
+# Ivy repos
+repos/
+
+
 ### OSX ###
 .DS_Store
 .AppleDouble
@@ -54,6 +58,8 @@ $RECYCLE.BIN/
 *.pydevproject
 .metadata
 .gradle
+.classpath
+.project
 bin/
 tmp/
 *.tmp

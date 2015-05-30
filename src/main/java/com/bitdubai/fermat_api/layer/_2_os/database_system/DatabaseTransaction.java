@@ -2,10 +2,19 @@ package com.bitdubai.fermat_api.layer._2_os.database_system;
 
 import java.util.List;
 
+
 /**
- * Created by ciencias on 3/24/15.
- */
-public interface DatabaseTransaction {
+ *
+ *  <p>The abstract class <code>com.bitdubai.fermat_api.layer._2_os.database_system.DatabaseTransaction</code> is a interface
+ *     that define the methods to manage insert and update transactions on the database.
+ *
+ *
+ *  @author  Luis
+ *  @version 1.0.0
+ *  @since   24/03/15.
+ * */
+
+ public interface DatabaseTransaction {
 
     public void addRecordToUpdate(DatabaseTable fromTable, DatabaseTableRecord fromRecord);
 

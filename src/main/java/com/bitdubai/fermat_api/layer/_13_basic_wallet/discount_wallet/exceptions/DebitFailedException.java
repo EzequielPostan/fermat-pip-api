@@ -7,7 +7,11 @@ import com.bitdubai.fermat_api.layer._13_basic_wallet.discount_wallet.enums.Debi
  */
 public class DebitFailedException extends Exception  {
 
-    private DebitFailedReasons reason;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -4911760450415120116L;
+	private DebitFailedReasons reason;
 
     public DebitFailedException (DebitFailedReasons reason){
         this.reason = reason;

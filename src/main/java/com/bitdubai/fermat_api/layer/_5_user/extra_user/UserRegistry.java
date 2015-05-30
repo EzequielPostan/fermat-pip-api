@@ -7,6 +7,9 @@ import com.bitdubai.fermat_api.layer._5_user.extra_user.exceptions.CantGetExtraU
 import java.util.UUID;
 
 /**
+ *  <p>The abstract class <code>com.bitdubai.fermat_api.layer._5_user.extra_user.UserRegistry</code> is a interface
+ *     that define the methods for management the Users operations.
+ *
  * Created by ciencias on 3/18/15.
  */
 public interface UserRegistry {

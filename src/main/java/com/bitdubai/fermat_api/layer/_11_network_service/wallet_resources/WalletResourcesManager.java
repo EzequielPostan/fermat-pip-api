@@ -5,18 +5,23 @@ import com.bitdubai.fermat_api.layer._11_network_service.CantGetResourcesExcepti
 import com.bitdubai.fermat_api.layer._15_middleware.app_runtime.enums.Wallets;
 
 /**
- * Created by loui on 18/02/15.
- */
+ *
+ *  <p>The abstract class <code>com.bitdubai.fermat_api.layer._11_network_service.wallet_resources.WalletResourcesManager/code> is a interface
+ *     that define the methods to retrieve wallets resource files.
+ *
+ *
+ *  @author  Loui
+ *  @version 1.0.0
+ *  @since   18/02/15.
+ * */
 public interface  WalletResourcesManager {
 
 
     public void checkResources() throws CantCheckResourcesException;
 
-    public byte[] getImageResource() throws CantGetResourcesException;
+    public byte[] getImageResource(String imageName) throws CantGetResourcesException;
 
-    public String getLayoutResource(/*WalletType, Developer, version, publisher*/) throws CantGetResourcesException;
-
-    public void setImageName(String name);
+    public String getLayoutResource(String layoutName) throws CantGetResourcesException;
 
     public void setwalletType(Wallets type);
 

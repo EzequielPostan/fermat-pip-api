@@ -7,6 +7,11 @@ import java.io.IOException;
  */
 public class CommunicationException extends IOException {
     
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6617598263430521619L;
+
 	public CommunicationException(){
 		super();
 	}

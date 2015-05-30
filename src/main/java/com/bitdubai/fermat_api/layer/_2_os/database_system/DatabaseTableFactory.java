@@ -5,8 +5,15 @@ import com.bitdubai.fermat_api.layer._2_os.database_system.DatabaseDataType;
 import java.util.ArrayList;
 
 /**
- * Created by ciencias on 3/23/15.
- */
+ *
+ *  <p>The abstract class <code>com.bitdubai.fermat_api.layer._2_os.database_system.DatabaseTableFactory</code> is a interface
+ *     that define the methods to manage the structure of the table.
+ *
+ *
+ *  @author  Luis
+ *  @version 1.0.0
+ *  @since  23/03/15.
+ * */
 public interface DatabaseTableFactory {
 
     public void addIndex(String index);

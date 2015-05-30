@@ -1,7 +1,9 @@
+
 package com.bitdubai.fermat_api.layer;
 
-/**
- * Created by ciencias on 20.01.15.
- */
+
 public class CantStartLayerException extends Exception {
+	
+	
+	private static final long serialVersionUID = 4150733208425219871L;
 }

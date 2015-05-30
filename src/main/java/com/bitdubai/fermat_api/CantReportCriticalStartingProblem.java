@@ -1,7 +1,9 @@
+
 package com.bitdubai.fermat_api;
 
-/**
- * Created by ciencias on 4/4/15.
- */
+
 public class CantReportCriticalStartingProblem extends Exception {
+
+	
+	private static final long serialVersionUID = 4150733208425009872L;
 }

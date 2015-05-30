@@ -1,22 +1,27 @@
 package com.bitdubai.fermat_api.layer._2_os.database_system;
 
-/**
- * Created by ciencias on 20.01.15.
- */
-
 import com.bitdubai.fermat_api.layer._2_os.database_system.exceptions.DatabaseNotFoundException;
 import com.bitdubai.fermat_api.layer._2_os.file_system.exceptions.CantOpenDatabaseException;
 import com.bitdubai.fermat_api.layer._2_os.database_system.exceptions.CantCreateDatabaseException;
 import java.util.UUID;
 
 /**
- * The Database System knows which databases are already accessible on this device.
- */
-public interface PluginDatabaseSystem {
+ *
+ *  <p>The abstract class <code>com.bitdubai.fermat_api.layer._2_os.database_system.PluginDatabaseSystem</code> is a interface
+ *     that define the methods to manage database system.
+ *     The Database System knows which databases are already accessible on this device.
+ *
+ *
+ *  @author  Luis
+ *  @version 1.0.0
+ *  @since   18/01/15.
+ * */
+
+ public interface PluginDatabaseSystem {
 
     public Database openDatabase(UUID ownerId, String databaseName) throws CantOpenDatabaseException, DatabaseNotFoundException;
 
-    public Database deleteDatabase(UUID ownerId, String databaseName) throws CantOpenDatabaseException, DatabaseNotFoundException;
+    public void deleteDatabase(UUID ownerId, String databaseName) throws CantOpenDatabaseException, DatabaseNotFoundException;
 
     public Database createDatabase (UUID ownerId, String databaseName) throws CantCreateDatabaseException;
 

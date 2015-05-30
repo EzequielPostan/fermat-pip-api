@@ -5,10 +5,14 @@ package com.bitdubai.fermat_api.layer._2_os.file_system.exceptions;
  */
 public class CantLoadFileException extends Exception {
 
-    String mFileName;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -3969485077547243542L;
+	private String mFileName;
 
     public CantLoadFileException (String fileName) {
-        mFileName = fileName;
+        this.mFileName = fileName;
     }
 
     @Override

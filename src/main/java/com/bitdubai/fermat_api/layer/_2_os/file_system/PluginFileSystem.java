@@ -5,10 +5,19 @@ import com.bitdubai.fermat_api.layer._2_os.file_system.exceptions.FileNotFoundEx
 
 import java.util.UUID;
 
+
 /**
- * Created by ciencias on 20.01.15.
- */
-public interface PluginFileSystem {
+ *
+ *  <p>The abstract class <code>com.bitdubai.fermat_api.layer._2_os.file_system.PluginFileSystem</code> is a interface
+ *     that define the methods to manage text and binary files on device.
+ *
+ *
+ *  @author  Luis
+ *  @version 1.0.0
+ *  @since   22/01/15.
+ * */
+
+ public interface PluginFileSystem {
 
     public PluginTextFile getTextFile(UUID ownerId, String directoryName, String fileName, FilePrivacy privacyLevel, FileLifeSpan lifeSpan) throws FileNotFoundException,CantCreateFileException;
 
