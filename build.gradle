@@ -8,7 +8,7 @@ apply plugin: 'eclipse'
 
 group = "com.bitdubai.wallet"
 sourceCompatibility = 1.7
-version = '1.0.3'
+version = '1.0.4'
 
 configurations {
     deployerJars

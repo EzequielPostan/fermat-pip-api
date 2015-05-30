@@ -9,5 +9,5 @@ public interface CryptoNetwork {
 
     public void loadCryptoWallet (UUID walletId);
 
-    public void createCryptoWallet (UUID walletId) throws  CantCreateCryptoWalletException;
+    public void createCryptoWallet (UUID walletId) throws com.bitdubai.fermat_api.layer._7_crypto_network.bitcoin.exceptions.CantCreateCryptoWalletException;
 }
