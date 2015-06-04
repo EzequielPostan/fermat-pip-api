@@ -1,4 +1,4 @@
-package com.bitdubai.fermat_api.layer._19_niche_type_wallet;
+package com.bitdubai.fermat_api.layer._19_niche_wallet_type;
 
 /**
  * Created by loui on 20/02/15.

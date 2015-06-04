@@ -4,7 +4,7 @@ package com.bitdubai.fermat_api.layer._1_definition.enums;
  * Created by ciencias on 2/13/15.
  */
 public enum Plugins {
-    
+
     BITDUBAI_LICENSE_MANAGER("license Manager", Developers.BITDUBAI),
     BITDUBAI_BLOCKCHAIN_INFO_WORLD("Blockchain Info World", Developers.BITDUBAI),
     BITDUBAI_SHAPE_SHIFT_WORLD("Shape Shift World", Developers.BITDUBAI),
@@ -19,6 +19,13 @@ public enum Plugins {
     BITDUBAI_WALLET_RUNTIME_MODULE("Wallet runtime Module", Developers.BITDUBAI),
     BITDUBAI_WALLET_MANAGER_MODULE("Wallet Manager Module", Developers.BITDUBAI),
     BITDUBAI_WALLET_FACTORY_MODULE("Wallet Factory Module", Developers.BITDUBAI),
+    BITDUBAI_BANK_NOTES_WALLET_NICHE_WALLET_TYPE("Bank Notes Wallet Niche Wallet Type", Developers.BITDUBAI),
+    BITDUBAI_CRYPTO_LOSS_PROTECTED_WALLET_NICHE_WALLET_TYPE("Crypto Loss Protected Wallet Niche Wallet Type", Developers.BITDUBAI),
+    BITDUBAI_CRYPTO_WALLET_NICHE_WALLET_TYPE("Crypto Wallet Niche Wallet Type", Developers.BITDUBAI),
+    BITDUBAI_DISCOUNT_WALLET_NICHE_WALLET_TYPE("Discount Wallet Niche Wallet Type", Developers.BITDUBAI),
+    BITDUBAI_FIAT_OVER_CRYPTO_LOSS_PROTECTED_WALLET_NICHE_WALLET_TYPE("Fiat Over Crypto Loss Protected Wallet Niche Wallet Type", Developers.BITDUBAI),
+    BITDUBAI_FIAT_OVER_CRYPTO_WALLET_NICHE_WALLET_TYPE("Fiat Over Crypto Wallet Niche Wallet Type", Developers.BITDUBAI),
+    BITDUBAI_MULTI_ACCOUNT_WALLET_NICHE_WALLET_TYPE("Multi Account Wallet Niche Wallet Type", Developers.BITDUBAI),
     BITDUBAI_INCOMING_INTRA_USER_TRANSACTION("Incoming Intra User Transaction", Developers.BITDUBAI),
     BITDUBAI_OUTGOING_INTRA_USER_TRANSACTION("Outgoing Intra User Transaction", Developers.BITDUBAI),
     BITDUBAI_INCOMING_DEVICE_USER_TRANSACTION("Incoming Device User Transaction", Developers.BITDUBAI),
@@ -47,9 +54,9 @@ public enum Plugins {
     private final String key;
     private final Developers developer;
 
-     Plugins(String key, Developers developer) {
-         this.key = key;
-         this.developer = developer;
+    Plugins(String key, Developers developer) {
+        this.key = key;
+        this.developer = developer;
     }
 
     public String getKey()   { return this.key; }
