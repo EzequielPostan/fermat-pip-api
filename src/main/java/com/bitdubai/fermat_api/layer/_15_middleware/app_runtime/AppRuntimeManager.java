@@ -14,8 +14,6 @@ public interface AppRuntimeManager {
 
     public SubApp getLastSubApp ();
 
-    public Wallet getLastWallet ();
-
     public Activity getLasActivity ();
 
     public Fragment getLastFragment ();
