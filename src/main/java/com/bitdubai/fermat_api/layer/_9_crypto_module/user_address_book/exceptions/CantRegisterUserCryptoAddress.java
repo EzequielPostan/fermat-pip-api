@@ -1,4 +1,4 @@
-package com.bitdubai.fermat_api.layer._9_crypto_module.address_book.exceptions;
+package com.bitdubai.fermat_api.layer._9_crypto_module.user_address_book.exceptions;
 
 /**
  * Created by toshiba on 30/03/2015.
