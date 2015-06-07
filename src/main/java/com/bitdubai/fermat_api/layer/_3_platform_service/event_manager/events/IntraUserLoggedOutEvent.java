@@ -9,7 +9,7 @@ import java.util.UUID;
 /**
  * Created by loui on 22/02/15.
  */
-public class IntraUserLoggedInEvent implements PlatformEvent {
+public class IntraUserLoggedOutEvent implements PlatformEvent {
 
     private EventType eventType;
 
@@ -17,7 +17,7 @@ public class IntraUserLoggedInEvent implements PlatformEvent {
 
     private UUID uuid;
 
-    public IntraUserLoggedInEvent(EventType eventType){
+    public IntraUserLoggedOutEvent(EventType eventType){
         this.eventType = eventType;
     }
 
