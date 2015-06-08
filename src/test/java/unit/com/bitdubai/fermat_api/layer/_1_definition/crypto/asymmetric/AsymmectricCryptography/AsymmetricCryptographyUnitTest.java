@@ -1,4 +1,4 @@
-package test.unit.com.bitdubai.fermat_api.layer._1_definition.crypto.asymmetric.AsymmectricCryptography;
+package unit.com.bitdubai.fermat_api.layer._1_definition.crypto.asymmetric.AsymmectricCryptography;
 
 public abstract class AsymmetricCryptographyUnitTest {
 	
