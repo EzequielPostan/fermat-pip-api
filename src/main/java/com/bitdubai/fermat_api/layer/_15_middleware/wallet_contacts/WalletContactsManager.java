@@ -28,7 +28,7 @@ public interface WalletContactsManager {
 
     public WalletContact createWalletContact(CryptoAddress cryptoAddress, UUID userId, String userName, UserTypes userType, UUID walletId) throws CantCreateWalletContactException;
 
-    public void updateWalletContact(WalletContact walletContact) throws CantUpdateWalletContactException;
+    public void updateWalletContact(UUID contactId, CryptoAddress cryptoAddress, String userName) throws CantUpdateWalletContactException;
 
     public void deleteWalletContact(UUID contactId) throws CantDeleteWalletContactException;
 }
