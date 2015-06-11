@@ -60,18 +60,33 @@ public interface WalletContact {
     public void setUserType(UserTypes userType);
 
     /**
-     * Return the cryptoAddress
+     * Return the deliveredCryptoAddress
      *
      * @return CryptoAddress
      */
-    public CryptoAddress getCryptoAddress();
+    public CryptoAddress getDeliveredCryptoAddress();
 
     /**
-     * Set the cryptoAddress
+     * Set the deliveredCryptoAddress
      *
-     * @param cryptoAddress delivered cryptoAddress
+     * @param deliveredCryptoAddress delivered cryptoAddress
      */
-    public void setCryptoAddress(CryptoAddress cryptoAddress);
+    public void setDeliveredCryptoAddress(CryptoAddress deliveredCryptoAddress);
+
+    /**
+     * Return the deliveredCryptoAddress
+     *
+     * @return CryptoAddress
+     */
+    public CryptoAddress getReceivedCryptoAddress();
+
+    /**
+     * Set the receivedCryptoAddress
+     *
+     * @param receivedCryptoAddress received cryptoAddress
+     */
+    public void setReceivedCryptoAddress(CryptoAddress receivedCryptoAddress);
+
 
     /**
      * Return the userId
