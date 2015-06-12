@@ -9,4 +9,5 @@ public interface BitcoinCryptoNetworkManager {
     public void setVault (CryptoVault cryptoVault);
     public void connectToBitcoinNetwork();
     public void disconnectFromBitcoinNetwork();
+    public Object getBroadcasters();
 }
