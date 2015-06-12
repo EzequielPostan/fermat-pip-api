@@ -5,5 +5,8 @@ package com.bitdubai.fermat_api.layer._1_definition.transaction_transference_pro
  */
 public enum Specialist {
     CRYPTO_ROUTER,
-    EXTRA_USER
+    EXTRA_USER,
+    DEVICE_USER,
+    INTRA_USER,
+    UNKNOWN
 }

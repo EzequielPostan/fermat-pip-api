@@ -8,10 +8,13 @@ import java.util.UUID;
 public class Transaction <E> {
     private UUID transactionID;
     private E information;
-    private Action action;
+    private String action;
     private long timestamp;
 
-    public Transaction(UUID transactionID, E information , Action action, long timestamp) {
+    // IMPORTANT: Fill the action parameter with the corresponding Action value applying name method.
+    // Examples: Action.APPLY.name(), Action.REVERT.name();
+
+    public Transaction(UUID transactionID, E information , String action, long timestamp) {
         this.transactionID = transactionID;
         this.information = information;
         this.action = action;
@@ -26,7 +29,7 @@ public class Transaction <E> {
         return this.information;
     }
 
-    public Action getAction(){
+    public String getAction(){
         return this.action;
     }
 
