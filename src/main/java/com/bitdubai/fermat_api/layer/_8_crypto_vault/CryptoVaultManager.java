@@ -12,6 +12,6 @@ public interface CryptoVaultManager {
     public void setUserId (UUID UserId);
     public void connectToBitcoin();
     public void disconnectFromBitcoin();
-    public String getAddress();
-    public List<String> getAddresses(int amount);
+    public CryptoAddress getAddress();
+    public List<CryptoAddress> getAddresses(int amount);
 }
